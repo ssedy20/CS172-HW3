@@ -4,7 +4,7 @@
 using namespace std;
 
 string sort(string& s)
-{
+{  //following lines of code will rearrange letters input by user//
 	for (int i = s.length() - 1; i >= 1; i--)
 
 		char currentMax = s[0];
@@ -18,7 +18,7 @@ string sort(string& s)
 				currentMaxIndex = j;
 			}
 		}
-
+	// following line of code switches 'i' with 'currentMaxIndex'//
 		if (currentMaxIndex != i)
 		{
 			s[currentMaxIndex] = s[i];
@@ -32,11 +32,13 @@ return s;
 
 int main ()
 {
-
-	cout << "Enter a string s: ":
+	//prompts user to input string//
+	cout << "Enter a string: "; 
 	string s;
-	getline(cin, s)
+	getline(cin, s);
 
-		cout << "The sorted string is: " << sort(s) endl;
+	//returns the sorted string// 
+	cout << "The sorted string is: " << sort(s) << endl;
 
 	return 0;
+}
